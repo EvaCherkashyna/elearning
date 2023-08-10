@@ -1,0 +1,12 @@
+.nav_container {
+  display: flex;
+  width: 1440px;
+  height: 45px;
+  flex-shrink: 0;
+
+  background: #343434;
+}
+.nav_list {
+  display: flex;
+  list-style: none;
+}
