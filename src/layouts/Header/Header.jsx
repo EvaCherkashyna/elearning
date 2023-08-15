@@ -3,7 +3,7 @@ import { HeaderBanner, HeaderNav } from '../../components'
 
 const Header = () => {
   return (
-    <header>
+    <header className=''>
       <HeaderBanner />
       <HeaderNav />
     </header>

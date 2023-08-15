@@ -1,3 +1,28 @@
-.footer_container{
+.container {
+  background: var(--primary-light-gray);
+}
+
+.content_container {
   display: flex;
+  color: var(--light-gray-color);
+}
+
+.copy_rights {
+  width: 100%;
+  height: 70px;
+  flex-shrink: 0;
+  background: var(--secondary-bgc);
+
+  color: #595959;
+  text-align: center;
+  font-family: 'Museo Sans Cyrl 300';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 70px;
+}
+
+.logo {
+  width: 234px;
+  height: 58px;
 }

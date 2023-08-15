@@ -4,7 +4,7 @@ import {  Services,KnowMore, InstructionalDesign, AboutClients, ContactUs } from
 
 const Main = () => {
   return (
-    <main>
+    <main className='common_style_container'>
       <Services/>
       <KnowMore></KnowMore>
       <InstructionalDesign></InstructionalDesign>

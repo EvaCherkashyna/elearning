@@ -1,12 +1,25 @@
 .nav_container {
   display: flex;
   width: 1440px;
-  height: 45px;
-  flex-shrink: 0;
+  height: 55px;
+  align-items: center;
+  justify-content: space-between;
 
-  background: #343434;
+  border-top: 10px solid var(--primary-green);
+  background: var(--secondary-bgc);
 }
 .nav_list {
   display: flex;
   list-style: none;
+  gap: 37px;
+  & li {
+    color: #fff;
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+.logo {
+  width: 107px;
+  height: 28px;
+  flex-shrink: 0;
 }

@@ -1,0 +1,30 @@
+@import "./fonts/MuseoSans/museoSans.scss";
+
+:root {
+  --primary-font: Museo Sans Cyrl 300;
+  --light-gray-color: #929292;
+  
+  --primary-bgc:#FFF;
+  --secondary-bgc:#343434;
+  --primary-green: #3d948e;
+  --primary-light-gray: #414141;
+  
+  --toggle-bgc: #ebebeb;
+  
+  --primary-font-color: #424242;
+  --secondary-font-color: #343434;
+
+  --primary-input-bgc:rgba(52, 52, 52, 0.1);
+  
+  [data-theme="dark"] {
+    --primary-bgc:#343434;
+    --primary-green: #3d948e;
+    --secondary-font-color: #FFF;
+    --primary-light-gray: #414141;
+    
+    --toggle-bgc: #414141;
+    
+    --primary-font-color: #fff;
+    --primary-input-bgc:rgba(255, 255, 255, 0.10);
+  }
+}
