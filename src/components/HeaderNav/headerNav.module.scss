@@ -6,7 +6,7 @@
   justify-content: space-between;
 
   border-top: 10px solid var(--primary-green);
-  background: var(--secondary-bgc);
+  background: var(--nav-bgc);
 }
 .nav_list {
   display: flex;
@@ -21,5 +21,4 @@
 .logo {
   width: 107px;
   height: 28px;
-  flex-shrink: 0;
 }

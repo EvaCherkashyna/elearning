@@ -1,3 +1,5 @@
+@import "../../styles/_mixins";
+
 .card_container {
   width: 202px;
   height: 278px;
@@ -11,7 +13,7 @@
   height: 36px;
   text-transform: uppercase;
   color: var(--primary-font-color);
-  font-family: Museo Sans Cyrl 700;
+  font-family: "Museo Sans Cyrl 700";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -22,12 +24,10 @@
 }
 .description {
   padding-top: 15px;
-  color: #212121;
-  font-family: Museo Sans Cyrl 300;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 145%;
+
+  @include paragraph(145%, 14px);
+  color: var(--description-color);
+
   &.yellow {
     border-top: 3px solid #dcce90;
   }

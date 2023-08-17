@@ -1,0 +1,56 @@
+@mixin title-h2($size) {
+  height: 60px;
+  line-height: 60px;
+
+  text-align: left;
+  font-family: "Museo Sans Cyrl 700";
+  font-size: $size;
+  font-style: normal;
+  font-weight: 600;
+
+  color: #999b9a;
+}
+@mixin title_h4($size: 30px) {
+  font-family: "Museo Sans Cyrl 300";
+  font-size: $size;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+
+  color: var(--primary-font-color);
+}
+@mixin flex_ai($ai: center) {
+  display: flex;
+  align-items: $ai;
+}
+
+@mixin paragraph($lh: 150%, $fns: 16px) {
+  font-family: "Museo Sans Cyrl 300";
+  font-size: $fns;
+  font-style: normal;
+  font-weight: 300;
+  line-height: $lh;
+}
+@mixin list_item {
+  display: flex;
+  align-items: flex-start;
+  width: 500px;
+  margin-bottom: 20px;
+  text-align: left;
+
+  font-family: "Museo Sans Cyrl 300";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+@mixin circle{
+  position: absolute;
+  
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  
+}

@@ -5,6 +5,7 @@ const image = require('../../images/knowMore.png')
 const KnowMore = () => {
   return (
     <section className={styles.section}>
+      <span className={styles.circle} />
       <div className={styles.section_BGI}>
       </div>
       <div className={styles.content}>

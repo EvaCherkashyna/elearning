@@ -1,9 +1,11 @@
+@import "../../styles/_mixins";
+
 .section {
   position: relative;
   text-align: left;
   height: calc(570px + 120px);
 
-  padding: 60px 60px;
+  padding: 60px 60px 60px 0;
 
   margin-top: -3px;
   &::before {
@@ -33,31 +35,41 @@
     pointer-events: none;
   }
 }
+.circle {
+  @include circle;
+
+  top: 50%;
+  right: 0;
+  transform: translate(calc(50% - 1px), -50%);
+
+  background-color: var(--primary-green);
+}
 
 .title {
   margin-top: 140px;
   width: 437px;
   text-transform: uppercase;
-  color: var(--primary-font-color);
+  color: #424242;
   font-family: Museo Sans Cyrl 700;
   font-size: 75px;
   font-style: normal;
 
-  line-height: 100%; 
+  line-height: 100%;
   text-transform: uppercase;
   & span {
+    color: inherit;
     font-size: 80px;
     line-height: 100%;
   }
 }
 .description {
   margin-top: 5px;
-  color: var(--primary-font-color);
+  color: #424242;
   font-family: Museo Sans Cyrl 300;
   font-size: 35px;
   font-style: normal;
   font-weight: 250;
-  line-height: 100%; 
+  line-height: 100%;
   text-transform: capitalize;
 }
 .section_BGI {
@@ -79,7 +91,7 @@
 
     width: calc(100% - 18rem);
     height: 10px;
-   background-color: var(--primary-green);
+    background-color: var(--primary-green);
     pointer-events: none;
   }
 }
@@ -95,7 +107,6 @@
   height: 100%;
 }
 .image {
-
   width: 311px;
   height: 512px;
   align-self: flex-end;
