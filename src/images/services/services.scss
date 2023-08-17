@@ -59,6 +59,9 @@ div.arrow_icon {
   &.outline svg path {
     stroke: var(--primary-font-color);
   }
+  &.rotate{
+    transform: rotate(90deg);
+  }
 }
 div.next {
   display: flex;

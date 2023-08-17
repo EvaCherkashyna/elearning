@@ -1,7 +1,7 @@
 .section {
   position: relative;
   margin-top: 95px;
-  padding: 36px 60px;
+  padding: 65px 60px 36px 60px;
   // border-left: 3px solid var(--primary-green);
   // border-bottom: 3px solid var(--primary-green);
   // border-image: linear-gradient(to center, #3d948e, transparent) 1;
@@ -49,7 +49,7 @@
 }
 .filters_container {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 .type_container {
   // padding-top: 9px;
@@ -146,8 +146,14 @@
   align-items: flex-start;
   gap: 13px 5px;
   flex-wrap: wrap;
-}
 
+  &.occupation_select_closed{
+    align-items: center;
+  }
+}
+span.occupation_item{
+  margin-right: 5px;
+}
 .occupation_item {
   height: 29px;
   padding: 3px 18px;

@@ -20,11 +20,7 @@ export const colors = [
   {
     color: "gray_outline",
     styles: { border: "1px solid #B5B7B6" }
-  },
-
-
-  ,
-
+  }
 ]
 export const occupation = [
   "All",

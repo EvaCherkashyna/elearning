@@ -116,10 +116,37 @@ const initialState = {
     },
 
   ],
-  filter: "All",
-  filteredServices: [],
-  searchServices:[],
-  servicesByType:[]
+  occupation: [
+    "All",
+    "Instructional Design",
+    "Elearning Development",
+    "Mobile Learning",
+    "Instructor-led Training",
+  ],
+  colors: [
+    {
+      color: "gray",
+      styles: {
+        backgroundColor: "#D9D9D9"
+      }
+    },
+    {
+      color: "yellow",
+      styles: { backgroundColor: "#E7D08C" },
+    },
+    {
+      color: "green",
+      styles: { backgroundColor: "#3D948E" },
+    },
+    {
+      color: "green_outline",
+      styles: { border: "1px solid #3D948E" }
+    },
+    {
+      color: "gray_outline",
+      styles: { border: "1px solid #B5B7B6" }
+    }
+  ]
 }
 
 
