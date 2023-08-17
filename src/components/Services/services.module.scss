@@ -2,18 +2,15 @@
   position: relative;
   margin-top: 95px;
   padding: 65px 60px 36px 60px;
-  // border-left: 3px solid var(--primary-green);
-  // border-bottom: 3px solid var(--primary-green);
-  // border-image: linear-gradient(to center, #3d948e, transparent) 1;
-  // border-radius: 0 0 0 30px ; 
+
 &::before {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0px; /* Смещение вниз для выгнутого бордера */
-/* Смещение вправо для выгнутого бордера */
-  width: 80%; /* Ширина бордера */
-  height: 100%; /* Высота бордера */
+  bottom: 0px; 
+
+  width: 80%;
+  height: 100%;
   border-radius: 0 0 0 30px;
   border-left: 3px solid #3d948e;
   border-bottom: 3px solid #3d948e;pointer-events: none;
@@ -49,7 +46,6 @@
 }
 .filters_container {
   display: flex;
-  // justify-content: space-between;
 }
 .type_container {
   // padding-top: 9px;

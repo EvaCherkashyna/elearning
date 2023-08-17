@@ -8,7 +8,7 @@ const KnowMore = () => {
       <div className={styles.section_BGI}>
       </div>
       <div className={styles.content}>
-        <div>
+        <div className={styles.left_side_content}>
           <h2 className={styles.title}>We Design <span>Learning.</span></h2>
           <h3 className={styles.description}>What We Can Do For You?</h3>
           <button className={styles.btn}>Know more</button>

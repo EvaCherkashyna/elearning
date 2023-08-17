@@ -1,13 +1,37 @@
 .section {
   position: relative;
   text-align: left;
-  height: calc(575px + 72px);
-  border-radius: 0 30px 30px 0;
-  padding: 36px 60px;
-  border-right: 3px solid var(--primary-green);
-  border-bottom: 3px solid var(--primary-green);
+  height: calc(570px + 120px);
 
+  padding: 60px 60px;
 
+  margin-top: -3px;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 80%;
+    height: 50%;
+    border-radius: 0 30px 0 0;
+    border-right: 3px solid #3d948e;
+    border-top: 3px solid #3d948e;
+    pointer-events: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 80%;
+    height: 50%;
+    border-radius: 0 0 30px 0;
+    border-right: 3px solid #3d948e;
+    border-bottom: 3px solid #3d948e;
+    pointer-events: none;
+  }
 }
 
 .title {
@@ -18,8 +42,8 @@
   font-family: Museo Sans Cyrl 700;
   font-size: 75px;
   font-style: normal;
-  // font-weight: 600;
-  line-height: 100%; /* 75px */
+
+  line-height: 100%; 
   text-transform: uppercase;
   & span {
     font-size: 80px;
@@ -33,28 +57,45 @@
   font-size: 35px;
   font-style: normal;
   font-weight: 250;
-  line-height: 100%; /* 35px */
+  line-height: 100%; 
   text-transform: capitalize;
 }
 .section_BGI {
   position: absolute;
   border-radius: 0px 20px 20px 0px;
   width: calc(100vw - 60px - 9rem);
-  height: calc(100% - 72px);
-  top: 36px;
+  height: calc(100% - 120px);
+  top: 60px;
   left: -9rem;
   z-index: 0;
   background-image: url("../../images/knowMoreBGI.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 140px;
+
+    width: calc(100% - 18rem);
+    height: 10px;
+   background-color: var(--primary-green);
+    pointer-events: none;
+  }
 }
 .content {
   position: relative;
   display: flex;
+  padding-right: 115px;
   justify-content: space-between;
   z-index: 10;
+  height: 100%;
 }
-
+.left_side_content {
+  height: 100%;
+}
 .image {
-  margin-right: 50px;
+
   width: 311px;
   height: 512px;
   align-self: flex-end;
