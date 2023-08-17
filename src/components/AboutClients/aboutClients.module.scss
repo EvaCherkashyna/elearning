@@ -1,11 +1,41 @@
 @import "../../styles/_mixins";
 .section {
+  position: relative;
+  padding: 63px 60px 60px 0;
+  text-align: left;
+  @include flex_ai();
+  justify-content: space-between;
+  gap: 110px;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
 
+    width: 80%;
+    height: 100%;
+    border-radius: 0px 30px 0 0px;
+    border-top: 3px solid #3d948e;
+    border-right: 3px solid #3d948e;
+    pointer-events: none;
+  }
 }
+
 .list_item {
   @include list_item;
 }
 .item_paragraph {
   align-self: flex-end;
   margin-left: 10px;
+}
+.content_title {
+  @include title_h4;
+  margin-bottom: 30px;
+}
+.content_description {
+  @include paragraph;
+  color: var(--primary-font-color);
+  margin-bottom: 40px;
+}
+.content {
 }
