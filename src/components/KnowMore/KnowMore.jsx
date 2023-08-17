@@ -1,16 +1,21 @@
 import React from 'react'
 import styles from './knowMore.module.scss'
 
-const image = require('../../images/knowMore.jpg')
+const image = require('../../images/knowMore.png')
 const KnowMore = () => {
   return (
-    <section className={styles.knowMore_container}>
-      <div>
-        <h2 className={styles.heading_lg}>We Design <span>Learning.</span></h2>
-        <h3>What We Can Do For You?</h3>
-        <button>Know more</button>
+    <section className={styles.section}>
+      <div className={styles.section_BGI}>
       </div>
-      <img src={image} width="300px" alt="men" />
+      <div className={styles.content}>
+        <div>
+          <h2 className={styles.title}>We Design <span>Learning.</span></h2>
+          <h3 className={styles.description}>What We Can Do For You?</h3>
+          <button className={styles.btn}>Know more</button>
+        </div>
+        <img className={styles.image} src={image} width="300px" alt="men" />
+      </div>
+
     </section>
   )
 }

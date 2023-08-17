@@ -3,15 +3,13 @@ import styles from "./slider.module.scss"
 
 
 const Slider = ({ cards }) => {
-  // console.log(cards)
   const [current, setCurrent] = useState(0)
 
   useEffect(() => {
     setTimeout(() => {
       const next = (current == cards.length - 1 ? 0 : current + 1);
-      // console.log(next)
       setCurrent(next);
-    }, 5000)
+    }, 2000)
   });
 
   return (

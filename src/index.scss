@@ -24,7 +24,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
+ul,li{
+  list-style: none;
+}
 .common_style_container {
   width: 100%;
   padding: 0 9rem;

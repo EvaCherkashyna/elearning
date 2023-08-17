@@ -1,0 +1,42 @@
+.card_container {
+  width: 202px;
+  height: 278px;
+  text-align: left;
+}
+.icon_container {
+  margin-bottom: 30px;
+}
+.title {
+  width: 202px;
+  height: 36px;
+  text-transform: uppercase;
+  color: var(--primary-font-color);
+  font-family: Museo Sans Cyrl 700;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  padding: 0 65px 0px 0;
+  margin-bottom: 15px;
+}
+.description {
+  padding-top: 15px;
+  color: #212121;
+  font-family: Museo Sans Cyrl 300;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 145%;
+  &.yellow {
+    border-top: 3px solid #dcce90;
+  }
+  &.green,
+  &.green_outline {
+    border-top: 3px solid #29b4ad;
+  }
+
+  &.gray_outline {
+    border-top: 3px solid #b5b7b6;
+  }
+}

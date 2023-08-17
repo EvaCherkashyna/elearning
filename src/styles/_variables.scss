@@ -15,6 +15,7 @@
   --secondary-font-color: #343434;
 
   --primary-input-bgc:rgba(52, 52, 52, 0.1);
+  --primary-svg-fill:rgba(52, 52, 52, 0.2);
   
   [data-theme="dark"] {
     --primary-bgc:#343434;
@@ -26,5 +27,6 @@
     
     --primary-font-color: #fff;
     --primary-input-bgc:rgba(255, 255, 255, 0.10);
+    --primary-svg-fill:rgba(255, 255, 255, 0.2);
   }
 }

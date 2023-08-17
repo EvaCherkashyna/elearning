@@ -1,0 +1,35 @@
+.cards_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px 0 0 0;
+}
+.page {
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  color: (--primary-font-color);
+  background-color: transparent;
+
+  &:disabled {
+    color: (--primary-svg-fill);
+  }
+  &.active {
+    background-color: var(--primary-input-bgc);
+  }
+}

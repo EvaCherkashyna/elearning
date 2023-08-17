@@ -1,6 +1,77 @@
-.knowMore_container{
-  display: flex;
+.section {
+  position: relative;
+  text-align: left;
+  height: calc(575px + 72px);
+  border-radius: 0 30px 30px 0;
+  padding: 36px 60px;
+  border-right: 3px solid var(--primary-green);
+  border-bottom: 3px solid var(--primary-green);
+
+
 }
-.heading_lg{
+
+.title {
+  margin-top: 140px;
+  width: 437px;
   text-transform: uppercase;
+  color: var(--primary-font-color);
+  font-family: Museo Sans Cyrl 700;
+  font-size: 75px;
+  font-style: normal;
+  // font-weight: 600;
+  line-height: 100%; /* 75px */
+  text-transform: uppercase;
+  & span {
+    font-size: 80px;
+    line-height: 100%;
+  }
+}
+.description {
+  margin-top: 5px;
+  color: var(--primary-font-color);
+  font-family: Museo Sans Cyrl 300;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 100%; /* 35px */
+  text-transform: capitalize;
+}
+.section_BGI {
+  position: absolute;
+  border-radius: 0px 20px 20px 0px;
+  width: calc(100vw - 60px - 9rem);
+  height: calc(100% - 72px);
+  top: 36px;
+  left: -9rem;
+  z-index: 0;
+  background-image: url("../../images/knowMoreBGI.jpg");
+}
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.image {
+  margin-right: 50px;
+  width: 311px;
+  height: 512px;
+  align-self: flex-end;
+}
+.btn {
+  border: none;
+  outline: none;
+  margin-top: 35px;
+  width: 198px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #3d948c;
+
+  color: #fff;
+  font-family: Museo Sans Cyrl 300;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
 }
