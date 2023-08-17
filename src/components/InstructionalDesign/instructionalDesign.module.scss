@@ -57,8 +57,9 @@
   width: 600px;
 }
 .title {
-  @include title-h2(50px);
+  @include title_h2(50px);
   margin-bottom: 35px;
+  color: #999b9a;
 }
 .list_item {
   @include list_item;

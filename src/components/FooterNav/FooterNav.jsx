@@ -4,18 +4,24 @@ const FooterNav = () => {
   return (
     <nav className={styles.nav_container}>
       <ul className={styles.nav_list}>
-        <li>Home eLearning</li>
-        <li>Price Quote Services</li>
-        <li>Instructional Design</li>
-        <li>eLearning Development </li>
-        <li> Mobile Learning</li>
-        <li> Product Training</li>
-        <li>Custom eLearning </li>
-        <li>eLearning for Retail </li>
-        <li> eLearning Packages</li>
-        <li> Contact</li>
+        <span className={styles.list_column}>
+          <li className={styles.list_item}>Home eLearning</li>
+          <li className={styles.list_item}>Price Quote Services</li>
+          <li className={styles.list_item}>Instructional Design</li>
+        </span>
+        <span className={styles.list_column}>
+          <li className={styles.list_item}>eLearning Development </li>
+          <li className={styles.list_item}> Mobile Learning</li>
+          <li className={styles.list_item}> Product Training</li>
+        </span>
+        <span className={styles.list_column}>
+          <li className={styles.list_item}>Custom eLearning </li>
+          <li className={styles.list_item}>eLearning for Retail </li>
+          <li className={styles.list_item}> eLearning Packages</li>
+          <li className={styles.list_item}> Contact</li>
+        </span>
       </ul>
-    
+
     </nav>
   )
 }

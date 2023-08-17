@@ -31,6 +31,7 @@
   top: 0;
   transform: translateY(-50%);
   @include title_h2(50px);
+  color: #999b9a;
 }
 .filters_container {
   display: flex;

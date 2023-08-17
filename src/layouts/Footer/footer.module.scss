@@ -1,12 +1,26 @@
-.container {
-  background: var(--primary-light-gray);
-}
+@import "../../styles/mixins";
 
-.content_container {
+.container {
+
+}
+.nav_container {
+  background: var(--primary-light-gray);
   display: flex;
+  align-items: flex-start;
+  height: 244px;
+  justify-content: space-between;
+  padding: 65px calc(9rem + 65px);
+  gap: 95px;
+}
+.content_container {
   color: var(--light-gray-color);
 }
-
+.description {
+  text-align: left;
+  margin-top: 5px;
+   @include paragraph(normal, 12px);
+  color: var(--light-gray-color);
+}
 .copy_rights {
   width: 100%;
   height: 70px;
@@ -15,7 +29,7 @@
 
   color: #595959;
   text-align: center;
-  font-family: 'Museo Sans Cyrl 300';
+  font-family: "Museo Sans Cyrl 300";
   font-size: 14px;
   font-style: normal;
   font-weight: 300;

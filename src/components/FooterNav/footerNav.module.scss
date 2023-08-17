@@ -1,4 +1,19 @@
+@import "../../styles/_mixins";
 .nav_container {
+  width: 100%;
   background: var(--primary-light-gray);
 }
+.nav_list{
+  @include flex_ai(flex-start); 
+  text-align: left;
+justify-content: space-between
 
+}
+.list_column {
+
+}
+.list_item {
+  @include paragraph(normal, 14px);
+   color: #929292;
+   margin-bottom: 10px;
+}

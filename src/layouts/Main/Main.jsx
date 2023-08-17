@@ -9,7 +9,6 @@ const Main = () => {
       <KnowMore></KnowMore>
       <InstructionalDesign></InstructionalDesign>
       <AboutClients/>
-      <ContactUs/>
     </main>
   )
 }
