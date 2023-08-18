@@ -80,7 +80,7 @@
   width: 40px;
   height: 40px;
   transition: 0.3s all ease 1ms;
-  // cursor: pointer;
+  cursor: pointer;
 
   .toggle[type="checkbox"]:checked ~ .toggle_container & {
     left: 0;

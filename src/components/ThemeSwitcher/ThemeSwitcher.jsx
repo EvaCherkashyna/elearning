@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import useLocalStorage from 'use-local-storage'
 
 import styles from "./themeSwitcher.module.scss"
-import Sun from "./sun.svg"
-import Moon from "./moon.svg"
+import Sun from "../../images/svg/sun.svg"
+import Moon from "../../images/svg/moon.svg"
 
 const logo = require("../../images/headerLogo.png")
 

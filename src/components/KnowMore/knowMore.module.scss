@@ -9,30 +9,43 @@
 
   margin-top: -3px;
   &::before {
-    content: "";
-    position: absolute;
+    @include pseudo_element(80%, 50%);
     right: 0;
     top: 0;
 
-    width: 80%;
-    height: 50%;
+    border-radius: 0 30px 0 0;
+    border-right: 3px solid var(--primary-input-bgc);
+    border-top: 3px solid var(--primary-input-bgc);
+
+  }
+  &.section_scrolled_top::before {
+    @include pseudo_element(80%, 50%);
+    right: 0;
+    top: 0;
+   
     border-radius: 0 30px 0 0;
     border-right: 3px solid #3d948e;
     border-top: 3px solid #3d948e;
-    pointer-events: none;
   }
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo_element(80%, 50%);
     right: 0;
     bottom: 0;
 
-    width: 80%;
-    height: 50%;
+    border-radius: 0 0 30px 0;
+    border-right: 3px solid var(--primary-input-bgc);
+    border-bottom: 3px solid var(--primary-input-bgc);
+
+    z-index:0;
+  }
+  &.section_scrolled_center::after {
+    @include pseudo_element(80%, 50%);
+    right: 0;
+    bottom: 0;
+
     border-radius: 0 0 30px 0;
     border-right: 3px solid #3d948e;
     border-bottom: 3px solid #3d948e;
-    pointer-events: none;
   }
 }
 .circle {
@@ -42,7 +55,11 @@
   right: 0;
   transform: translate(calc(50% - 1px), -50%);
 
-  background-color: var(--primary-green);
+  background-color: #EBEBEB;
+  &.scrolled{
+    background-color: var(--primary-green);
+  }
+  z-index:1;
 }
 
 .title {
@@ -84,15 +101,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   &::after {
-    content: "";
-    position: absolute;
+    @include pseudo_element(calc(100% - 18rem), 10px);
     bottom: -10px;
     right: 140px;
 
-    width: calc(100% - 18rem);
-    height: 10px;
     background-color: var(--primary-green);
-    pointer-events: none;
   }
 }
 .content {

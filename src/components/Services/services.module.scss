@@ -6,17 +6,22 @@
   margin-top: 95px;
 
   &::before {
-    content: "";
-    position: absolute;
+    @include pseudo_element(80%, 100%);
     left: 0;
     bottom: 0px;
 
-    width: 80%;
-    height: 100%;
+    border-radius: 0 0 0 30px;
+    border-left: 3px solid var(--primary-input-bgc);
+    border-bottom: 3px solid var(--primary-input-bgc);
+  }
+  &.scrolled::before {
+    @include pseudo_element(80%, 100%);
+    left: 0;
+    bottom: 0px;
+
     border-radius: 0 0 0 30px;
     border-left: 3px solid #3d948e;
     border-bottom: 3px solid #3d948e;
-    pointer-events: none;
   }
 }
 .circle {
@@ -24,7 +29,10 @@
   top: 0;
   left: 0;
   transform: translate(calc(-50%), calc(-50%));
-  background-color: var(--primary-green);
+  background-color: #EBEBEB;
+  &.scrolled{
+    background-color: var(--primary-green);
+  }
 }
 .title {
   position: absolute;

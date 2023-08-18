@@ -50,3 +50,10 @@
   height: 25px;
   border-radius: 100%;
 }
+@mixin pseudo_element($w, $h) {
+  content: "";
+  position: absolute;
+  width: $w;
+  height: $h;
+  pointer-events: none;
+}

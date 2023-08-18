@@ -48,12 +48,13 @@ path.previous {
 
 div.next {
   transform: rotate(180deg);
+  cursor: pointer;
 }
 div.arrow_icon {
   width: fit-content;
   height: fit-content;
   display: flex;
-
+cursor: pointer;
   align-items: center;
   justify-content: center;
   &.outline svg path {
@@ -61,6 +62,9 @@ div.arrow_icon {
   }
   &.rotate{
     transform: rotate(90deg);
+    & svg path{
+      stroke: var(--primary-font-color);
+    }
   }
 }
 div.next {

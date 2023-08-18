@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react'
 import styles from "./services.module.scss"
 
 import { SearchIcon, CloseIcon } from '../../images/svg'
@@ -6,48 +5,31 @@ import { SearchIcon, CloseIcon } from '../../images/svg'
 import ServicesPagination from '../ServicesPagination/ServicesPagination'
 import { useSelector } from 'react-redux'
 import { ArrowIcon } from '../../images/services'
+import useFilters from '../../hooks/useFilters'
+import useScroll from "../../hooks/useScroll"
 
 
 const Services = () => {
-  const { services, colors, occupation } = useSelector(state => state.services)
+  const { colors, occupation } = useSelector(state => state.services)
+  const isScrolledTop = useScroll('services',"top_before");
+  const {
+    currentServices,
+    currentOcupation,
+    type,
+    showTypes,
+    showOccupation,
+    serchValue,
+    setShowTypes,
+    setSearchValue,
+    handleFilterByType,
+    setShowOccupation,
+    handleByOccupation
+  } = useFilters();
 
-  const [currentServices, setCurrentServices] = useState(services)
-
-  const [type, setType] = useState(colors[0])
-  const [showTypes, setShowTypes] = useState(false)
-
-  const [currentOcupation, setCurrentOcupation] = useState(occupation[0])
-  const [showOccupation, setShowOccupation] = useState(true)
-
-  const [serchValue, setSearchValue] = useState("")
-
-  useEffect(() => {
-    let filtered = services.filter(service => service.occupation.toLowerCase().includes(serchValue));
-    if (type.color == "gray" && currentOcupation.toLowerCase() == "all") {
-      filtered = filtered
-    }
-    else if (type.color == "gray") {
-      filtered = filtered.filter(service => service.occupation.includes(currentOcupation))
-    } else if (currentOcupation.toLowerCase() == "all") {
-      filtered = filtered.filter(service => service.color == type.color)
-    }
-    else {
-      filtered = filtered.filter(service => service.color == type.color).filter(service => service.occupation.includes(currentOcupation))
-    }
-    setCurrentServices(filtered)
-  }, [type, currentOcupation, serchValue])
-  const handleFilterByType = (choosedType) => {
-    setShowTypes(false)
-    setType(choosedType);
-  }
-  const handleByOccupation = (ocpt) => {
-    setShowOccupation(false)
-    setCurrentOcupation(ocpt)
-  }
   return (
-    <section className={styles.section}>
+    <section id="services" className={`${styles.section} ${isScrolledTop&&styles.scrolled}`}>
       <h2 className={styles.title}>Services We Provide</h2>
-      <span className={styles.circle} />
+      <span className={`${styles.circle} ${ isScrolledTop &&styles.scrolled}`} />
       <div className={styles.filters_container}>
         <div className={styles.search_label}>
           <input value={serchValue}
@@ -100,7 +82,6 @@ const Services = () => {
         </div>
       </div>
       <ServicesPagination services={currentServices} />
-      {/* <PaginationExample services={currentServices} /> */}
     </section>
   )
 }

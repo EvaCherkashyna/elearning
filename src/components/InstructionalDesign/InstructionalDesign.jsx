@@ -1,12 +1,21 @@
 import React from 'react'
 import styles from "./instructionalDesign.module.scss"
 import checkmark from "../../images/svg/checkmark.svg"
+import useScroll from '../../hooks/useScroll'
 
 const image = require("../../images/instructionalDesign.png")
 const InstructionalDesign = () => {
+
+  const isScrolledTopBefore = useScroll('inst_design', "top_before");
+  const isScrolledTop= useScroll('inst_design', "top");
+
   return (
-    <section className={styles.section}>
-       <span className={styles.circle} />
+    <section id="inst_design"
+      className={`${styles.section} 
+    ${isScrolledTopBefore && styles.scrolled}
+    ${isScrolledTop && styles.scrolled_center}
+    `}>
+      <span className={`${styles.circle} ${isScrolledTop && styles.scrolled}`} />
       <h2 className={styles.title}> Instructional Design</h2>
       <div className={styles.content}>
         <img src={image} alt="peoples" />

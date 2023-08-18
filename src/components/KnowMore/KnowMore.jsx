@@ -1,11 +1,20 @@
 import React from 'react'
 import styles from './knowMore.module.scss'
-
+import useScroll from '../../hooks/useScroll'
 const image = require('../../images/knowMore.png')
+
+
 const KnowMore = () => {
+  const isScrolledTop = useScroll('know_more', "top_before");
+
+  const isScrolledCenter = useScroll('know_more', "center");
+
   return (
-    <section className={styles.section}>
-      <span className={styles.circle} />
+    <section id="know_more"
+      className={`${styles.section}
+     ${isScrolledTop && styles.section_scrolled_top}
+     ${isScrolledCenter && styles.section_scrolled_center}`}>
+      <span className={`${styles.circle} ${isScrolledCenter && styles.scrolled}`} />
       <div className={styles.section_BGI}>
       </div>
       <div className={styles.content}>
