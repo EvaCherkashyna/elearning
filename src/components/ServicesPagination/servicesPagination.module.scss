@@ -3,7 +3,11 @@
   margin-top: 50px;
   gap: 70px;
 }
-
+@media screen and (max-width: 1400px) {
+  .cards_container {
+    gap: 30px;
+  }
+}
 .btn {
   width: 40px;
   height: 40px;

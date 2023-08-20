@@ -1,8 +1,7 @@
+@import "../../styles/_mixins";
 .banner {
-  display: flex;
-  align-items: center;
+  @include flex_ai();
   justify-content: space-between;
-  width: 100vw;
   height: 681px;
 
   border: 1px solid #000;
@@ -10,4 +9,7 @@
     linear-gradient(0deg, rgba(52, 52, 52, 0.45) 0%, rgba(52, 52, 52, 0.45) 100%),
     url("../../images/headerBanner.jpg"),
     lightgray 50% / cover no-repeat;
+    background-size: cover;
+
+    
 }

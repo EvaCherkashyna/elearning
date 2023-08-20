@@ -18,7 +18,7 @@ const InstructionalDesign = () => {
       <span className={`${styles.circle} ${isScrolledTop && styles.scrolled}`} />
       <h2 className={styles.title}> Instructional Design</h2>
       <div className={styles.content}>
-        <img src={image} alt="peoples" />
+        <img className={styles.img} src={image} alt="peoples" />
         <div className={styles.right_side_content}>
 
           <h4 className={styles.content_title}>We know learning inside and out </h4>

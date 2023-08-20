@@ -16,7 +16,7 @@ const Slider = ({ cards }) => {
     <div className={styles.container}>
       <div div className={styles.slider_wrapper}  >
         {cards?.map((page, i) =>
-          < >
+          <>
             <div
 
               className={i == current ? `${styles.card} ${styles.card_active}` : `${styles.card}`}

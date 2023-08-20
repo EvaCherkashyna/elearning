@@ -1,21 +1,35 @@
+@import "../../styles/_mixins";
+
 .nav_container {
-  display: flex;
-  width: 1440px;
-  height: 55px;
-  align-items: center;
+  @include flex_ai;
   justify-content: space-between;
+  height: 55px;
 
   border-top: 10px solid var(--primary-green);
   background: var(--nav-bgc);
 }
 .nav_list {
   display: flex;
-  list-style: none;
   gap: 37px;
+
   & li {
     color: #fff;
     font-size: 14px;
     line-height: normal;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .nav_list li{
+
+      font-size: 13px;
+    
+  }
+}
+@media screen and (min-width: 1600px) {
+  .nav_list li{
+
+      font-size: 16px;
+    
   }
 }
 .logo {

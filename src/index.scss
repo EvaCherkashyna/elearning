@@ -33,6 +33,17 @@ li {
   width: 100%;
   padding: 0 9rem;
 }
+
+@media screen and (max-width: 1400px) {
+  .common_style_container{
+    padding: 0 7rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .common_style_container{
+    padding: 0 12rem;
+  }
+}
 input,
 button,
 textarea {

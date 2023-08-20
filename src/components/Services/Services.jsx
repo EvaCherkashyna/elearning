@@ -11,7 +11,7 @@ import useScroll from "../../hooks/useScroll"
 
 const Services = () => {
   const { colors, occupation } = useSelector(state => state.services)
-  const isScrolledTop = useScroll('services',"top_before");
+  const isScrolledTop = useScroll('services', "top_before");
   const {
     currentServices,
     currentOcupation,
@@ -27,9 +27,9 @@ const Services = () => {
   } = useFilters();
 
   return (
-    <section id="services" className={`${styles.section} ${isScrolledTop&&styles.scrolled}`}>
+    <section id="services" className={`${styles.section} ${isScrolledTop && styles.scrolled}`}>
       <h2 className={styles.title}>Services We Provide</h2>
-      <span className={`${styles.circle} ${ isScrolledTop &&styles.scrolled}`} />
+      <span className={`${styles.circle} ${isScrolledTop && styles.scrolled}`} />
       <div className={styles.filters_container}>
         <div className={styles.search_label}>
           <input value={serchValue}

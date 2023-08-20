@@ -8,7 +8,7 @@ const useFilters = () => {
   const [type, setType] = useState(colors[0]);
   const [showTypes, setShowTypes] = useState(false);
   const [currentOcupation, setCurrentOcupation] = useState(occupation[0]);
-  const [showOccupation, setShowOccupation] = useState(true);
+  const [showOccupation, setShowOccupation] = useState(false);
   const [serchValue, setSearchValue] = useState("");
 
   useEffect(() => {

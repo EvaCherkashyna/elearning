@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './headerNav.module.scss'
-import logo from "./logo.svg"
-// const logo = require("../../images/navLogo.png")
+import logo from "../../images/svg/logo.svg"
+
 const HeaderNav = () => {
+  
   return (
     <nav className={`${styles.nav_container} common_style_container`}>
       <img src={logo} className={styles.logo} />

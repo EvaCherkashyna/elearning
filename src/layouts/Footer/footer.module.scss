@@ -1,7 +1,6 @@
 @import "../../styles/mixins";
 
 .container {
-
 }
 .nav_container {
   background: var(--primary-light-gray);
@@ -12,13 +11,14 @@
   padding: 65px calc(9rem + 65px);
   gap: 95px;
 }
+
 .content_container {
   color: var(--light-gray-color);
 }
 .description {
   text-align: left;
   margin-top: 5px;
-   @include paragraph(normal, 12px);
+  @include paragraph(normal, 12px);
   color: var(--light-gray-color);
 }
 .copy_rights {
@@ -39,4 +39,15 @@
 .logo {
   width: 234px;
   height: 58px;
+}
+
+@media screen and (max-width: 1400px) {
+  .nav_container  {
+    padding: 65px calc(7rem + 65px);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .nav_container  {
+    padding: 65px calc(12rem + 65px);
+  }
 }

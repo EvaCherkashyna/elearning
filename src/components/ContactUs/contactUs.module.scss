@@ -1,19 +1,22 @@
 @import "../../styles/_mixins";
 .section {
-  padding: 50px 0 62px 0;
-  background-color: #3d948c;
   width: 100vw;
+  padding: 50px 0 62px 0;
+
+  background-color: #3d948c;
 }
 
 .title {
   @include title_h2(50px, center);
-  color: #fff;
   margin-bottom: 30px;
+
+  color: #fff;
 }
 .description {
   @include paragraph(normal, 20px);
-  color: #fff;
   margin-bottom: 62px;
+
+  color: #fff;
 }
 .form {
   width: 691px;
@@ -21,15 +24,19 @@
 }
 .input {
   width: 100%;
-  padding: 18px 35px;
-  border-radius: 28px;
   margin-bottom: 23px;
+  padding: 18px 35px;
+
+  
   @include paragraph(normal, 16px);
   color: #fff;
+  
+  border-radius: 28px;
+  background-color: #41a297;
+  
   &::placeholder {
     color: #fff;
   }
-  background-color: #41a297;
   &.sm_input {
     height: 55px;
   }
@@ -37,18 +44,15 @@
     height: 181px;
     margin-bottom: 60px;
   }
-  &:-webkit-autofill {
-    background-color: #41a297;
-    color: #fff;
-  }
 }
 .btn {
-  
-  background-color: transparent;
   width: 240px;
   height: 55px;
-  border-radius: 28px;
-  border: 1px solid#fff;
+  
   @include title_h4(20px);
   color: #fff;
+  
+  border-radius: 28px;
+  border: 1px solid#fff;
+  background-color: transparent;
 }

@@ -7,7 +7,7 @@ const ServiceCard = ({ service }) => {
 
 
   return (
-    <article className={styles.card_container}>
+    <article className={styles.container}>
       <div className={styles.icon_container}>
         <Icon service={service} />
       </div>

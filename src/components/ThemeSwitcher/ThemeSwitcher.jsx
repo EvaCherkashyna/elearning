@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
     setChecked(prev => !prev)
   }
   return (
-    <article className={styles.themeToggle_container}>
+    <article className={styles.container}>
       <img src={logo} className={styles.logo} />
 
       <h4 className={styles.heading}>Taking Learning to the Next Level</h4>
