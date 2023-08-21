@@ -8,12 +8,26 @@
 .nav_list {
   @include flex_ai(flex-start);
   justify-content: space-between;
-
+  width: 100%;
   text-align: left;
 }
 .list_item {
   margin-bottom: 10px;
-
   @include paragraph(normal, 14px);
   color: #929292;
+}
+
+@media screen and (max-width: 767px) {
+  .list_item {
+    @include paragraph(normal, 11px);
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .nav_list {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .list_column {
+    width: 45%;
+  }
 }

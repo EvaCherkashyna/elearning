@@ -57,3 +57,5 @@ const Slider = ({ cards }) => {
 }
 
 export default Slider
+
+

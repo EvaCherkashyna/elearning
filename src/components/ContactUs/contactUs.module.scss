@@ -8,8 +8,8 @@
 
 .title {
   @include title_h2(50px, center);
+  height: 60px;
   margin-bottom: 30px;
-
   color: #fff;
 }
 .description {
@@ -27,13 +27,12 @@
   margin-bottom: 23px;
   padding: 18px 35px;
 
-  
   @include paragraph(normal, 16px);
   color: #fff;
-  
+
   border-radius: 28px;
   background-color: #41a297;
-  
+
   &::placeholder {
     color: #fff;
   }
@@ -48,11 +47,66 @@
 .btn {
   width: 240px;
   height: 55px;
-  
+
   @include title_h4(20px);
   color: #fff;
-  
+
   border-radius: 28px;
   border: 1px solid#fff;
   background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .description {
+    @include paragraph(normal, 16px);
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .title {
+    @include title_h2(34px, center);
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .form {
+    width: calc(100% - 4rem);
+    margin: auto;
+  }
+  .btn {
+    width: 200px;
+    height: 55px;
+
+    @include title_h4(16px);
+    color: #fff;
+  }
+  .input {
+    @include paragraph(normal, 14px);
+    color: #fff;
+  }
+}
+@media screen and (min-width: 375px) {
+  .description {
+    @include paragraph(normal, 14px);
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .title {
+    @include title_h2(25px, center);
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .form {
+    width: calc(100% - 4rem);
+    margin: auto;
+  }
+  .btn {
+    width: 200px;
+    height: 55px;
+
+    @include title_h4(16px);
+    color: #fff;
+  }
+  .input {
+    @include paragraph(normal, 14px);
+    color: #fff;
+  }
 }

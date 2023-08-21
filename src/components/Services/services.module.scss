@@ -28,9 +28,9 @@
   @include circle;
   top: 0;
   left: 0;
-  transform: translate(calc(-50%), calc(-50%));
-  background-color: #EBEBEB;
-  &.scrolled{
+  transform:translate(calc(-50% + 1px), calc(-50%));
+  background-color: #ebebeb;
+  &.scrolled {
     background-color: var(--primary-green);
   }
 }
@@ -39,6 +39,7 @@
   top: 0;
   transform: translateY(-50%);
   @include title_h2(50px);
+  height: 60px;
   color: #999b9a;
 }
 .filters_container {
@@ -88,7 +89,7 @@
 .search {
   width: 300px;
   height: 45px;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
 
   border: none;
   outline: none;
@@ -161,4 +162,60 @@ span.occupation_item {
 .closeIcon {
   @include flex_ai();
   height: 29px;
+}
+@media screen and (max-width: 767px) {
+  .title {
+    @include title_h2(38px);
+    height: 60px;
+  }
+  .filters_container {
+    flex-direction: column;
+  }
+  .type_container {
+    margin: 10px 0 0 20px;
+  }
+  .occupation_container {
+    @include flex_ai(flex-start);
+    margin-left: 20px;
+  }
+  .search {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 375px) and(max-width: 580px) {
+  .title {
+    @include title_h2(30px);
+    height: 60px;
+  }
+  .section {
+    margin-top: 65px;
+    padding: 35px 0 10px 35px;
+  }
+  .search {
+    width: 150px;
+    height: 31px;
+  }
+  .type_label,
+  .type_item,
+  .occupation_label,
+  .occupation_item {
+    font-size: 14px;
+  }
+  .occupation_item{
+    height: 25px;
+  }
+  .circle {
+    @include circle;
+    width: 20px;
+    height: 20px;
+  }
+  .searchIcon {
+    & svg{
+      width: 15px;
+      height: 15px;
+    }
+    position: absolute;
+    top: 8px;
+    right: 20px;
+  }
 }

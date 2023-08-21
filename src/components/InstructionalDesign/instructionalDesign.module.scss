@@ -3,7 +3,7 @@
 .section {
   position: relative;
   padding: 40px 0px 55px 60px;
-
+  text-align: left;
   &::before {
     @include pseudo_element(80%, 10%);
     @include pe_top_left(var(--primary-input-bgc));
@@ -68,11 +68,13 @@
 }
 .title {
   @include title_h2(50px);
+  height: 60px;
   margin-bottom: 35px;
   color: #999b9a;
 }
 .list_item {
   @include list_item;
+  width: 100%;
 }
 .item_paragraph {
   align-self: flex-end;
@@ -83,17 +85,61 @@
     width: 350px;
     height: 350px;
   }
-
 }
 @media screen and (min-width: 1600px) {
   .title {
     @include title_h2(52px);
+    height: 60px;
   }
-.item_paragraph,.content_description {
+  .item_paragraph,
+  .content_description {
     font-size: 20px;
   }
   .content_title {
     @include title_h4(33px);
   }
+}
 
+@media screen and (max-width: 767px) {
+  .img {
+    width: 250px;
+    height: 250px;
+  }
+  .title {
+    @include title_h2(38px);
+    height: 60px;
+  }
+  .right_side_content {
+    width: 300px;
+  }
+  .item_paragraph,
+  .content_description {
+    font-size: 14px;
+  }
+  .content_title {
+    @include title_h4(26px);
+  }
+}
+@media screen and (min-width: 375px) and(max-width: 580px) {
+  .content {
+    @include flex_ai(flex-start);
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .title {
+    @include title_h2(25px, left, 60px);
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  .content_title {
+    @include title_h4(20px);
+  }
+  .section {
+    padding: 40px 0px 55px 35px;
+  }
+  .right_side_content {
+    width: 100%;
+  }
 }

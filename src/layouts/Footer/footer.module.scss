@@ -13,6 +13,7 @@
 }
 
 .content_container {
+  text-align: left;
   color: var(--light-gray-color);
 }
 .description {
@@ -29,11 +30,7 @@
 
   color: #595959;
   text-align: center;
-  font-family: "Museo Sans Cyrl 300";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 70px;
+  @include paragraph(70px, 14px, 300);
 }
 
 .logo {
@@ -42,12 +39,30 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .nav_container  {
+  .nav_container {
     padding: 65px calc(7rem + 65px);
   }
 }
 @media screen and (min-width: 1600px) {
-  .nav_container  {
+  .nav_container {
     padding: 65px calc(12rem + 65px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    width: calc(234px / 2);
+    height: calc(58px / 2);
+  }
+  .nav_container {
+    padding: 65px calc(1rem + 25px);
+    gap: 15%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .nav_container {
+    flex-direction: column;
+    height: fit-content;
   }
 }

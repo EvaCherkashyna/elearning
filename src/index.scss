@@ -35,13 +35,23 @@ li {
 }
 
 @media screen and (max-width: 1400px) {
-  .common_style_container{
+  .common_style_container {
     padding: 0 7rem;
   }
 }
 @media screen and (min-width: 1600px) {
-  .common_style_container{
+  .common_style_container {
     padding: 0 12rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .common_style_container {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 375px) and(max-width: 580px) {
+  .common_style_container {
+    padding: 0 1rem;
   }
 }
 input,

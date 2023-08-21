@@ -53,12 +53,9 @@
   width: 437px;
   margin-top: 140px;
 
-  color: #424242;
-  font-family:"Museo Sans Cyrl 700";
-  font-size: 75px;
-  font-style: normal;
-  line-height: 100%;
+  @include title_h2(75px, left, 100%);
   text-transform: uppercase;
+  color: #424242;
 
   & span {
     color: inherit;
@@ -90,7 +87,7 @@
   &::after {
     @include pseudo_element(calc(100% - 18rem), 10px);
     bottom: -10px;
-    right: 140px;
+    left: 9rem;
 
     background-color: var(--primary-green);
   }
@@ -142,10 +139,113 @@
     font-size: 33px;
   }
 }
+@media screen and (max-width: 1400px) {
+  .section_BGI {
+    left: -7rem;
+    width: calc(100vw - 60px - 7rem);
+    &::after {
+      @include pseudo_element(calc(100% - 14rem), 10px);
+      bottom: -10px;
+      left: 7rem;
 
+      background-color: var(--primary-green);
+    }
+  }
+}
 @media screen and (min-width: 1600px) {
   .section_BGI {
     left: -12rem;
     width: calc(100vw - 60px - 12rem);
+    &::after {
+      @include pseudo_element(calc(100% - 24rem), 10px);
+      bottom: -10px;
+      left: 12rem;
+
+      background-color: var(--primary-green);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .section{
+    height: calc(450px + 120px);
+  }
+  .section_BGI {
+    left: -2rem;
+    width: calc(100vw - 60px - 2rem);
+    &::after {
+      @include pseudo_element(calc(100% - 4rem), 10px);
+      bottom: -10px;
+      left: 2rem;
+
+      background-color: var(--primary-green);
+    }
+  }
+  .title {
+    margin-top: 100px;
+    @include title_h2(45px, left, 100%);
+    & span {
+      font-size: 48px;
+    }
+  }
+  .description {
+    @include paragraph(100%,20px, 250);
+    color: #424242;
+    text-transform: capitalize;
+  }
+  .content {
+    padding-right: 20px;
+  }
+  .left_side_content {
+    width: 50%;
+  }
+  .image {
+    width: calc(311px / 3 + 311px / 3);
+    height: calc(512px / 3 + 512px / 3);
+    align-self: flex-end;
+  }
+  .btn {
+    width: 158px;
+    height: 40px;
+    margin-top: 35px;
+  
+    @include title_h4(16px);
+    color: #fff;
+  }
+}
+@media screen and (min-width: 375px) and(max-width: 580px) {
+  .section{
+    height: calc(350px + 120px);
+  }
+  .section_BGI {
+    left: -1rem;
+    width: calc(100vw - 60px - 1rem);
+    &::after {
+      @include pseudo_element(calc(100% - 2rem), 10px);
+      bottom: -10px;
+      left: 1rem;
+
+      background-color: var(--primary-green);
+    }
+  }
+  .image {
+    width: calc(311px / 5 * 3);
+    height: calc(512px / 5 * 3);
+    align-self: flex-end;
+  }
+  .btn {
+    width: 140px;
+    height: 40px;
+    margin-top: 35px;
+  
+    @include title_h4(16px);
+    color: #fff;
+  }
+  .title{
+    margin-top: 50px;
+    @include title_h2(35px, left, 100%);
+    & span {
+      font-size: 38px;
+    }
+    width: fit-content;
   }
 }

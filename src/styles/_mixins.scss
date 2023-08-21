@@ -1,6 +1,5 @@
-@mixin title_h2($size, $tx-al: left) {
-  height: 60px;
-  line-height: 60px;
+@mixin title_h2($size, $tx-al: left,$lh:60px) {
+  line-height: $lh;
   text-align: $tx-al;
   font-family: "Museo Sans Cyrl 700";
   font-size: $size;

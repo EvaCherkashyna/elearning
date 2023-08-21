@@ -4,15 +4,17 @@ import ServiceCard from '../ServicesCard/ServiceCard'
 import { NextIcon } from '../../images/services';
 
 import styles from "./servicesPagination.module.scss"
+import useWindowWidth from '../../hooks/useWindowWidth';
 
 const ServicesPagination = ({ services }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const width = useWindowWidth()
 
-  const itemsPerPage = 4; 
+  const itemsPerPage = width > 767 ? 4 : width < 580 ? 1 : 2;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
-  const totalPages = services.length / 4 > 3 ? services.length / 4 : 3
-  const activePages = Math.ceil(services.length / 4)
+  let totalPages = services.length / itemsPerPage > 3 ? services.length / itemsPerPage : 3
+  const activePages = Math.ceil(services.length / itemsPerPage)
 
   const currentServices = services.slice(firstIndex, lastIndex);
 
@@ -71,7 +73,7 @@ const ServicesPagination = ({ services }) => {
     );
     return buttons;
   };
-  
+
   return (
     <section>
       <div className={styles.cards_container}>

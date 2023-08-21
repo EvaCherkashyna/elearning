@@ -1,3 +1,5 @@
+@import "../../styles/_mixins";
+
 .container {
   display: flex;
   width: 875px;
@@ -51,7 +53,6 @@
   left: 425px;
 }
 .card_active {
- 
   opacity: 1;
   pointer-events: visible;
 }
@@ -61,10 +62,9 @@
   height: 100%;
   object-fit: cover;
 }
-.card_envelope{
+.card_envelope {
   width: 60px;
   margin-bottom: 10px;
-
 }
 .card_overlay {
   position: absolute;
@@ -78,13 +78,9 @@
 
 .card_title {
   width: 160px;
+  @include title_h4(24px);
   color: #fff;
   text-align: center;
-  font-family: "Museo Sans Cyrl 500";
-  font-size: 23.775px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .card_pagination {
   display: flex;
@@ -110,14 +106,13 @@
   }
 }
 
-
 @media screen and (max-width: 1400px) {
-  .container{
+  .container {
     height: 350px;
     width: 775px;
     margin-left: 15px;
   }
-  .slider_wrapper{
+  .slider_wrapper {
     width: 750px;
   }
   .card {
@@ -127,5 +122,76 @@
 
   .card_second {
     left: 370px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    height: 260px;
+    width: 420px;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+  .card_pagination {
+    flex-direction: row;
+    height: 30px;
+  }
+  .slider_wrapper {
+    width: 420px;
+    margin-bottom: 10px;
+  }
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+  .card_title {
+    font-size: 20px;
+  }
+  .card_second {
+    left: 220px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .container {
+    height: 200px;
+    width: 310px;
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+  .card_pagination {
+    flex-direction: row;
+    height: 32px;
+  }
+  .slider_wrapper {
+    width: 310px;
+    margin-bottom: 10px;
+  }
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+  .card_title {
+    text-align: center;
+    width: 100px;
+    color: #fff;
+    font-size: 16px;
+  }
+  .card_second {
+    left: 160px;
+  }
+  .pagination_dot {
+    width: 10px;
+    height: 10px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.35);
+  
+    &.pagination_dot_active {
+      width: 20px;
+      height: 20px;
+  
+      border-radius: 20px;
+      background: #fff;
+    }
   }
 }
