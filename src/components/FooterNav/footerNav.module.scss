@@ -18,6 +18,7 @@
   @include paragraph(normal, 14px);
   color: #929292;
   &:hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 }
