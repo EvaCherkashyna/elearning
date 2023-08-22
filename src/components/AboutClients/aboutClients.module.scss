@@ -29,9 +29,6 @@
     justify-content: space-between;
     gap: 20px;
 }
-.left_side_content{
-
-}
 .item_paragraph {
   align-self: flex-end;
   margin-left: 10px;
@@ -46,6 +43,7 @@
   margin-bottom: 40px;
 }
 
+//media for desktop
 @media screen and (max-width: 1400px) {
   .img {
     width: 350px;
@@ -66,6 +64,8 @@
     @include title_h4(33px);
   }
 }
+
+//media for mobile
 @media screen and (max-width: 767px) {
   .img {
     width: 250px;

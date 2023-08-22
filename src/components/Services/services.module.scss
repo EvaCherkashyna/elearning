@@ -28,7 +28,8 @@
   @include circle;
   top: 0;
   left: 0;
-  transform:translate(calc(-50% + 1px), calc(-50%));
+
+  transform: translate(calc(-50% + 1px), calc(-50%));
   background-color: #ebebeb;
   &.scrolled {
     background-color: var(--primary-green);
@@ -37,10 +38,12 @@
 .title {
   position: absolute;
   top: 0;
-  transform: translateY(-50%);
+
   @include title_h2(50px);
   height: 60px;
   color: #999b9a;
+
+  transform: translateY(-50%);
 }
 .filters_container {
   display: flex;
@@ -53,6 +56,7 @@
 .type_item_selected {
   width: 28px;
   height: 28px;
+
   border-radius: 20px;
 }
 .close_svg {
@@ -72,11 +76,11 @@
 
   width: 112px;
   height: 28px;
-  border-radius: 14px;
   gap: 5px;
   padding: 0 6px;
 
   border: none;
+  border-radius: 14px;
   background: var(--primary-input-bgc);
 }
 .type_item {
@@ -105,11 +109,8 @@
     color: var(--primary-font-color);
   }
 }
-@media screen and (max-width: 1600px) {
-  .search {
-    width: 250px;
-  }
-}
+
+
 .searchIcon {
   position: absolute;
   top: 14px;
@@ -163,6 +164,11 @@ span.occupation_item {
   @include flex_ai();
   height: 29px;
 }
+@media screen and (max-width: 1600px) {
+  .search {
+    width: 250px;
+  }
+}
 @media screen and (max-width: 767px) {
   .title {
     @include title_h2(38px);
@@ -201,7 +207,7 @@ span.occupation_item {
   .occupation_item {
     font-size: 14px;
   }
-  .occupation_item{
+  .occupation_item {
     height: 25px;
   }
   .circle {
@@ -210,7 +216,7 @@ span.occupation_item {
     height: 20px;
   }
   .searchIcon {
-    & svg{
+    & svg {
       width: 15px;
       height: 15px;
     }

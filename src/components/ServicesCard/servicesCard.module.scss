@@ -3,6 +3,7 @@
 .container {
   width: 22%;
   height: 278px;
+
   text-align: left;
 }
 .icon_container {
@@ -11,16 +12,12 @@
 .title {
   width: 202px;
   height: 36px;
-  text-transform: uppercase;
-  color: var(--primary-font-color);
-  font-family: "Museo Sans Cyrl 700";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-
   padding: 0 65px 0px 0;
   margin-bottom: 15px;
+
+  @include title_h2(16px,left,normal);
+  color: var(--primary-font-color);
+  text-transform: uppercase;
 }
 .description {
   padding-top: 15px;
@@ -41,7 +38,7 @@
   }
 }
 
-
+//media for mobile
 @media screen and (max-width: 767px) {
   .container {
     width: 45%;

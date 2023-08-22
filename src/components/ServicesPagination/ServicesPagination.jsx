@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import {ServiceCard} from '..'
+import {useWindowWidth} from '../../hooks';
 
-import ServiceCard from '../ServicesCard/ServiceCard'
 import { NextIcon } from '../../images/services';
-
 import styles from "./servicesPagination.module.scss"
-import useWindowWidth from '../../hooks/useWindowWidth';
 
 const ServicesPagination = ({ services }) => {
+
   const [currentPage, setCurrentPage] = useState(1);
   const width = useWindowWidth()
 
@@ -43,7 +43,7 @@ const ServicesPagination = ({ services }) => {
     }
     buttons.push(
       <button key="first" className={styles.btn}
-        disabled={currentPage == 1 || currentPage >= activePages}
+        disabled={currentPage == 1}
         onClick={handlePreviousPage}>
         <NextIcon type="previous" />
       </button>

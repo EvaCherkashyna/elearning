@@ -3,14 +3,11 @@
   margin-top: 50px;
   gap: 70px;
 }
-@media screen and (max-width: 1400px) {
-  .cards_container {
-    gap: 30px;
-  }
-}
+
 .btn {
   width: 40px;
   height: 40px;
+
   background-color: transparent;
   border: none;
   outline: none;
@@ -22,12 +19,14 @@
   margin: 70px 0 0 0;
 }
 .page {
+  width: 40px;
+  height: 40px;
+
+  color: var(--primary-font-color);
+  
   border-radius: 100%;
   border: none;
   outline: none;
-  width: 40px;
-  height: 40px;
-  color: var(--primary-font-color);
   background-color: transparent;
 
   &:disabled {
@@ -35,5 +34,11 @@
   }
   &.active {
     background-color: var(--primary-input-bgc);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .cards_container {
+    gap: 30px;
   }
 }

@@ -11,11 +11,14 @@
 .nav_list {
   display: flex;
   gap: 37px;
+
   color: #ff0000;
+
   & li {
-    color: #fff;
     font-size: 14px;
     line-height: normal;
+    color: #fff;
+
     &:hover {
       text-decoration: underline;
     }
@@ -25,9 +28,11 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  fill: var(--primary-font-color);
+  
   width: 30px;
   height: 30px;
+
+  fill: var(--primary-font-color);
 }
 .burger_btn {
   background-color: transparent;
@@ -39,28 +44,33 @@
 }
 .burger {
   position: relative;
+
   width: 30px;
   height: 30px;
 }
 .burger_list_container {
-  position: relative;
-  display: none;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2rem;
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--transparent-bgc);
   z-index: 100;
+
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  
   text-align: left;
+  
+  background-color: var(--transparent-bgc);
   & li {
+    margin-bottom: 20px;
+
     color: var(--primary-font-color);
     font-size: 20px;
     line-height: normal;
-    margin-bottom: 20px;
+
     &:hover {
       text-decoration: underline;
     }
@@ -73,6 +83,8 @@
   width: 107px;
   height: 28px;
 }
+
+//media for desktop
 @media screen and (max-width: 1400px) {
   .nav_list li {
     font-size: 13px;
@@ -84,6 +96,7 @@
   }
 
 }
+//media for mobile
 @media screen and (max-width: 767px) {
   .burger_list_container ul li {
     font-size: 16px;

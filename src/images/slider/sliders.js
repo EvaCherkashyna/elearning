@@ -6,7 +6,7 @@ const img5 = require("./slider5.png")
 const img6 = require("./envelope.png")
 
 export const sliders = [
-  [
+  
     {
       image: img1,
       title: "Services",
@@ -17,8 +17,8 @@ export const sliders = [
       title: "Instructional Design",
       color: "",
     },
-  ],
-  [
+ 
+  
 
     {
       image: img3,
@@ -30,8 +30,8 @@ export const sliders = [
       title: "eLearning Price Quote",
       color: "rgba(15, 87, 82, 0.35)",
     },
-  ],
-  [
+
+  
     {
       image: img5,
       title: "eLearning Packages",
@@ -42,5 +42,5 @@ export const sliders = [
       title: "Contact us",
       color: "#3D948E",
     },
-  ]
+  
 ]

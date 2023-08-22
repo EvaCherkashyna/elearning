@@ -1,6 +1,7 @@
 import React from 'react'
+import {useScroll} from '../../hooks'
+
 import styles from './knowMore.module.scss'
-import useScroll from '../../hooks/useScroll'
 const image = require('../../images/knowMore.png')
 
 

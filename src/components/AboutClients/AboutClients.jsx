@@ -1,20 +1,25 @@
 import React from 'react'
+import { useWindowWidth } from '../../hooks'
+
+import checkmark from "../../images/svg&icons/checkmark.svg"
 import styles from "./aboutClients.module.scss"
-import checkmark from "../../images/svg/checkmark.svg"
-import useWindowWidth from '../../hooks/useWindowWidth'
+
 const image = require("../../images/aboutClients.png")
+
 const AboutClients = () => {
-  const width = useWindowWidth()>767
+
+  const width = useWindowWidth() > 767
+
   return (
-    <section className={styles.section}>
+    <section id="clients" className={styles.section}>
       {!width &&
         <>
           <h4 className={styles.content_title}>Our clients love the work we do </h4>
           <p className={styles.content_description}>
             We pride ourselves on developing training strategies with the learners in mind, ensuring your time and resources are well utilized.</p>
         </>}
-      <div className={styles.content }>
-        <div className={styles.left_side_content }>
+      <div className={styles.content}>
+        <div className={styles.left_side_content}>
           {width &&
             <>
               <h4 className={styles.content_title}>Our clients love the work we do </h4>

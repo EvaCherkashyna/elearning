@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import useLocalStorage from 'use-local-storage'
+import { useWindowWidth } from '../../hooks'
 
 import styles from "./themeSwitcher.module.scss"
-import Sun from "../../images/svg/sun.svg"
-import Moon from "../../images/svg/moon.svg"
-import useWindowWidth from '../../hooks/useWindowWidth'
+import { Sun, Moon } from "../../images/svg&icons"
+
 
 const logo = require("../../images/headerLogo.png")
 

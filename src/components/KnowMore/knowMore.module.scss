@@ -123,22 +123,7 @@
   border-radius: 25px;
   background-color: var(--primary-green);
 }
-
-@media screen and (max-width: 1400px) {
-  .section_BGI {
-    left: -7rem;
-    width: calc(100vw - 60px - 7rem);
-  }
-  .title {
-    font-size: 73px;
-    & span {
-      font-size: 78px;
-    }
-  }
-  .description {
-    font-size: 33px;
-  }
-}
+//media for desktop
 @media screen and (max-width: 1400px) {
   .section_BGI {
     left: -7rem;
@@ -150,6 +135,15 @@
 
       background-color: var(--primary-green);
     }
+  }
+  .title {
+    font-size: 73px;
+    & span {
+      font-size: 78px;
+    }
+  }
+  .description {
+    font-size: 33px;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -165,13 +159,16 @@
     }
   }
 }
+//media for mobile
 @media screen and (max-width: 767px) {
   .section{
     height: calc(450px + 120px);
   }
   .section_BGI {
     left: -2rem;
+
     width: calc(100vw - 60px - 2rem);
+    
     &::after {
       @include pseudo_element(calc(100% - 4rem), 10px);
       bottom: -10px;

@@ -9,14 +9,20 @@
   @include flex_ai(flex-start);
   justify-content: space-between;
   width: 100%;
+
   text-align: left;
 }
 .list_item {
   margin-bottom: 10px;
+
   @include paragraph(normal, 14px);
   color: #929292;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
+//media for mobile
 @media screen and (max-width: 767px) {
   .list_item {
     @include paragraph(normal, 11px);

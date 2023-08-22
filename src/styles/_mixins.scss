@@ -1,4 +1,4 @@
-@mixin title_h2($size, $tx-al: left,$lh:60px) {
+@mixin title_h2($size, $tx-al: left, $lh: 60px) {
   line-height: $lh;
   text-align: $tx-al;
   font-family: "Museo Sans Cyrl 700";
@@ -6,12 +6,12 @@
   font-style: normal;
   font-weight: 600;
 }
-@mixin title_h4($size: 30px) {
+@mixin title_h4($size: 30px, $fw: 400,$lh:normal) {
   font-family: "Museo Sans Cyrl 500";
   font-size: $size;
-  font-weight: 400;
+  font-weight: $fw;
   font-style: normal;
-  line-height: normal;
+  line-height: $lh;
 
   color: var(--primary-font-color);
 }
@@ -20,7 +20,7 @@
   align-items: $ai;
 }
 
-@mixin paragraph($lh: 150%, $fns: 16px,$fw:300) {
+@mixin paragraph($lh: 150%, $fns: 16px, $fw: 300) {
   font-family: "Museo Sans Cyrl 300";
   font-size: $fns;
   font-style: normal;
@@ -76,4 +76,3 @@
   border-top: 3px solid $c;
   border-right: 3px solid $c;
 }
-
