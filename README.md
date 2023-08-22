@@ -78,7 +78,7 @@ npm config set legacy-peer-deps true
   <img width="250px" src="src/readmeFor/serviceChoosed.png"/>
   
 4. ### Navigational Links with Scroll: 
-Implemented navigation links that smoothly scroll to specific sections, enhancing user-friendliness and ease of navigation.
+Implemented navigation links that smoothly scroll to specific sections.
 
 5. ### Dynamic Border Color Change: 
 Developed a feature that dynamically changes the border color from gray to green as the user scrolls down the page.
