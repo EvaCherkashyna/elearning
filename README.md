@@ -57,3 +57,35 @@ if command above doesn't work try command below.
 ```bash
 npm config set legacy-peer-deps true 
 ```
+
+
+## Implemented features:
+
+1. ### Dark-Light Theme Switch
+  
+  <img height="200px" src="src/readmeFor/dark.png"/>
+  <img height="200px" src="src/readmeFor/light.png"/>
+
+1. ### Automatic Slider 
+   
+ <img height="150px" src="src/readmeFor/slider1.png"/>
+  <img height="150px" src="src/readmeFor/slider2.png"/>
+  <img height="150px" src="src/readmeFor/slider3.png"/>
+
+3. ### Service Filtering.
+ <img width="250px" src="src/readmeFor/serviceNone.png"/>
+  <img width="250px" src="src/readmeFor/serviceAll.png"/>
+  <img width="250px" src="src/readmeFor/serviceChoosed.png"/>
+  
+4. ### Navigational Links with Scroll: 
+Implemented navigation links that smoothly scroll to specific sections, enhancing user-friendliness and ease of navigation.
+
+5. ### Dynamic Border Color Change: 
+Developed a feature that dynamically changes the border color from gray to green as the user scrolls down the page.
+
+6. ### Mobile Responsiveness (375-767px): 
+
+  <img width="250px" src="src/readmeFor/mobile.png"/>
+
+7. ### Desktop Responsiveness (1400px and above): 
+  <img height="250px" src="src/readmeFor/desktop.png"/>
