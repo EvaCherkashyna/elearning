@@ -40,7 +40,7 @@ Before you begin, ensure that you have the following software installed on your 
 Once you've completed the installation and configuration steps, you can run the React application. In the project directory, run:
 
   ```bash
-  npm install
+  npm start
   ```
     
 This will start the development server and open the application in your default web browser. Any changes you make to the source code will automatically update the application in the browser.
